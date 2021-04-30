@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 24, 2021, 1:05:39 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <joined-subclass name="com.ag.Regular_Employee" extends="com.ag.Employee" table="regemp123" lazy="false">
+        <key>
+            <column name="ID" />
+        </key>
+        <property name="salary" type="float">
+            <column name="SALARY" />
+        </property>
+        <property name="bonus" type="int">
+            <column name="BONUS" />
+        </property>
+    </joined-subclass>
+</hibernate-mapping>

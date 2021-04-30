@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 17, 2019 11:51:57 AM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+	<class name="com.pojo.Student" table="STUDENT">
+		<id name="studentId" type="long">
+			<column name="STUDENTID" />
+			<generator class="increment" />
+		</id>
+		<property name="studentName" type="java.lang.String">
+			<column name="STUDENT_NAME" />
+		</property>
+		<set name="courses" table="STUDENT_COURSE" inverse="false"
+			lazy="true" cascade="all">
+			<key>
+				<column name="STUDENT_ID" />
+
+			</key>
+
+			<many-to-many column="COURSE_ID" class="com.pojo.Course"></many-to-many>
+		</set>
+	</class>
+</hibernate-mapping>

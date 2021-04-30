@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 1, 2021, 11:52:12 AM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.ag.Answer" table="ANSWER">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="increment" />
+        </id>
+        <property name="answerName" type="java.lang.String">
+            <column name="ANSWERNAME" />
+        </property>
+        <property name="postedBy" type="java.lang.String">
+            <column name="POSTEDBY" />
+        </property>
+
+    </class>
+</hibernate-mapping>

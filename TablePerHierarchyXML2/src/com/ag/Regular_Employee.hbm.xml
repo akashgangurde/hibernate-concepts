@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 24, 2021, 11:24:49 AM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <subclass name="com.ag.Regular_Employee" lazy="false" discriminator-value="reg_emp" extends="com.ag.Employee">
+
+        <property name="salary" type="float">
+            <column name="SALARY" />
+        </property>
+        <property name="bonus" type="int">
+            <column name="BONUS" />
+        </property>
+    </subclass>
+</hibernate-mapping>

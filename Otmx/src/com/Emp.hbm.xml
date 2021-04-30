@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 26, 2021, 12:48:43 PM by Hibernate Tools 4.0.1.Final -->
+<hibernate-mapping>
+    <class name="com.Emp" table="emp" catalog="otmx">
+        <id name="eid" type="java.lang.Integer">
+            <column name="eid" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="depart" class="com.Depart" fetch="select">
+            <column name="did" />
+        </many-to-one>
+        <property name="ename" type="string">
+            <column name="ename" length="121" />
+        </property>
+        <property name="salary" type="string">
+            <column name="salary" length="121" />
+        </property>
+    </class>
+</hibernate-mapping>

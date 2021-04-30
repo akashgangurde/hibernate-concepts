@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 24, 2021, 1:05:39 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <joined-subclass name="com.ag.Contract_Employee" extends="com.ag.Employee" table="conemp123" lazy="false">
+        <key>
+            <column name="ID" />
+        </key>
+        <property name="pay_per_hour" type="float">
+            <column name="PAY_PER_HOUR" />
+        </property>
+        <property name="contract_duraction" type="java.lang.String">
+            <column name="CONTRACT_DURACTION" />
+        </property>
+    </joined-subclass>
+</hibernate-mapping>
